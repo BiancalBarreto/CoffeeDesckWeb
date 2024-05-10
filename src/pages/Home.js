@@ -2,13 +2,15 @@ import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Innovation from "./Innovation.gif";
 import cogumelo from "./cogumelo.jpg";
-import './Home.css';
+import '../App.css';
+import Footer from "../components/Footer";
 
 export default function Home(){
     return(
         <>
        <div className="container">
             <div class="row">
+                <NavBar/>
                 <div className="col estilo text-start mt-lg-5">
                     <h1>Coffe Desck</h1>
                 
@@ -20,7 +22,7 @@ export default function Home(){
                     <h4>Simplificando o suporte técnico,
                     nosso sistema conecta usuários e técnicos em uma jornada de resolução de problemas sem complicações.</h4>
                     <div class="mt-5">
-                    <button class="btn botao botaofonte">Cadastre-se</button>
+                    <button className="btn botao botaofonte">Cadastre-se</button>
                     </div> 
                 </div>
                 <div class="col estilo text-start mb-5">
@@ -104,10 +106,34 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-     
-
         </div>
-
+       </div>
+       <div>
+        <div className="container mt-5 m-5" id="contato">
+            <div className="row justify-content-center">
+                <div className="card border-dark m-5">
+                    <div className="mb-3 mt-2 text-center">
+                    Como podemos ajudar?
+                    </div>
+                    <div className="form-floating mb-3 mt-3">
+                        <input type="text" className="form-control" id="floatingText" placeholder="Seu nome"></input>
+                        <label for="floatingInput">Nome</label>
+                    </div>
+                    <div className="form-floating mb-3 mt-3">
+                        <input type="email" className="form-control" id="floatingTextInput" placeholder="name@example.com"></input>
+                        <label for="floatingInput">E-mail</label>
+                    </div>
+                    <div className="form-floating mb-3 mt-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+                        <label for="floatingTextarea2">Mensagem</label>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4 m-3">
+                        <button class="btn botao" type="button">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <Footer/>
+        </div>
        </div>
         </>
       
